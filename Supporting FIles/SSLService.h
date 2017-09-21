@@ -1,9 +1,4 @@
 //
-//  SSLService_iOS.h
-//  SSLService-iOS
-//
-//  Created by Jens on 21.09.17.
-//
 
 #import <UIKit/UIKit.h>
 
