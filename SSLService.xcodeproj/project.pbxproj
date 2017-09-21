@@ -12,6 +12,7 @@
 		8C62D4C61F66DA6900F2B7A7 /* SocketUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0ABD511EE89FCF00B098F1 /* SocketUtils.swift */; };
 		B48C6C011F742F5B007DD0C1 /* SSLService.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Sources/SSLService.swift /* SSLService.swift */; };
 		B48C6C031F7435F3007DD0C1 /* SSLService.h in Headers */ = {isa = PBXBuildFile; fileRef = B493D0B11F742E2500EA5485 /* SSLService.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B48C6C0E1F743984007DD0C1 /* Socket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B48C6C0D1F743984007DD0C1 /* Socket.framework */; };
 		B493D0B31F742E2500EA5485 /* SSLService.h in Headers */ = {isa = PBXBuildFile; fileRef = B493D0B11F742E2500EA5485 /* SSLService.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B493D0B71F742E3400EA5485 /* SSLService.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Sources/SSLService.swift /* SSLService.swift */; };
 		_LinkFileRef_Socket_via_SSLService /* libSocket.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_Socket" /* libSocket.dylib */; };
@@ -36,6 +37,7 @@
 		8C4223051CF7444C0047BDC3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8C9896431ED8A3E800AA1670 /* BlueSSLService.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BlueSSLService.podspec; sourceTree = "<group>"; };
 		B48C6BF91F742F43007DD0C1 /* SSLService_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SSLService_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B48C6C0D1F743984007DD0C1 /* Socket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Socket.framework; path = Carthage/Build/iOS/Socket.framework; sourceTree = "<group>"; };
 		B493D0AF1F742E2500EA5485 /* SSLService_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SSLService_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B493D0B11F742E2500EA5485 /* SSLService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSLService.h; sourceTree = "<group>"; };
 		B493D0B21F742E2500EA5485 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B48C6C0E1F743984007DD0C1 /* Socket.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +101,14 @@
 			path = "Supporting FIles";
 			sourceTree = "<group>";
 		};
+		B48C6C0C1F743984007DD0C1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B48C6C0D1F743984007DD0C1 /* Socket.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		Dependencies_ /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +129,7 @@
 				"_____Configs_" /* Configs */,
 				Dependencies_ /* Dependencies */,
 				"____Products_" /* Products */,
+				B48C6C0C1F743984007DD0C1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -485,6 +497,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -538,6 +554,10 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
