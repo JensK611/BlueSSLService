@@ -1,0 +1,2 @@
+# BlueSocket dependency
+github "IBM-Swift/BlueSocket" ~> 0.12.68
